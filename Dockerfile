@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-COPY docker .
+COPY . .
 
 RUN cmake -B build && cmake --build build
 
-CMD ["./build/exalgo"]
+ENTRYPOINT ["./build/exalgo"]
