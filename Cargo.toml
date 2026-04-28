@@ -1,0 +1,18 @@
+[package]
+name = "exalgo-interpreter"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "exalgo"
+path = "src/main.rs"
+
+[dependencies]
+
+[dev-dependencies]
+pretty_assertions = "1"
+insta = "1"
+rstest = "0.18"
+
+[profile.release]
+opt-level = 3
