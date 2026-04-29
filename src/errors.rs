@@ -6,6 +6,6 @@ pub enum ExalgoError {
     LexicalError {
         line: usize,
         column: usize,
-        message: String
+        message: String,
     },
 }

@@ -1,6 +1,5 @@
 use exalgo_interpreter::lexer::Lexer;
-use exalgo_interpreter::token::{ Token, TokenType };
-
+use exalgo_interpreter::token::{Token, TokenType};
 
 #[cfg(test)]
 mod lexer_tests {
@@ -13,7 +12,9 @@ mod lexer_tests {
 
         let tokens = lexer.tokenize().unwrap();
 
-        let token_type= TokenType::Identifiant { name: src.to_string() };
+        let token_type = TokenType::Identifiant {
+            name: src.to_string(),
+        };
         let res = Token::new(token_type, 1, 5);
 
         assert_eq!(tokens[0], res);

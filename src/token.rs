@@ -52,7 +52,7 @@ pub enum TokenType {
     Identifiant { name: String },
     EOF,
     None,
-    Unknown { char: char }
+    Unknown { char: char },
 }
 
 #[derive(Debug, Clone, PartialEq)]

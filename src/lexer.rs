@@ -1,5 +1,5 @@
-use crate::token::{ Token, TokenType };
 use crate::errors::ExalgoError;
+use crate::token::{Token, TokenType};
 
 pub struct Lexer {
     src: Vec<char>,
@@ -26,6 +26,7 @@ impl Lexer {
         }
     }
 
+    #[expect(dead_code)]
     fn peek_next(&self) -> Option<char> {
         if self.position + 1 < self.src.len() {
             Some(self.src[self.position + 1])
@@ -139,7 +140,7 @@ impl Lexer {
             '(' => {
                 self.advance();
                 TokenType::ParenOuvrante
-            },
+            }
 
             '=' => {
                 self.advance();
@@ -150,7 +151,7 @@ impl Lexer {
                 } else {
                     TokenType::Egal
                 }
-            },
+            }
 
             '"' => self.read_string(),
 
