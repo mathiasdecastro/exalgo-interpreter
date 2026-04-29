@@ -1,5 +1,5 @@
 [package]
-name = "exalgo-interpreter"
+name = "exalgo_interpreter"
 version = "0.1.0"
 edition = "2024"
 
@@ -8,6 +8,7 @@ name = "exalgo"
 path = "src/main.rs"
 
 [dependencies]
+thiserror = "1"
 
 [dev-dependencies]
 pretty_assertions = "1"
