@@ -14,7 +14,7 @@ mod lexer_tests {
         let tokens = lexer.tokenize().unwrap();
 
         let token_type= TokenType::Identifiant { name: src.to_string() };
-        let res = Token::new(token_type, 1, 4);
+        let res = Token::new(token_type, 1, 5);
 
         assert_eq!(tokens[0], res);
     }
